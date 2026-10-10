@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: d462080af2c295549b2417a8a322463d
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3b39f1d07786b52488d15b877d5cb398
+  - enabled: 1
+    path: Assets/Scenes/SmartPattern.unity
+    guid: 3cf33e51ece7a784e86cedbebb198093
+  - enabled: 1
+    path: Assets/Scenes/MateriDetail.unity
+    guid: f0d54af4f336890498b646f3453eaaec
+  - enabled: 1
+    path: Assets/Scenes/AnalisisBahan.unity
+    guid: f1967788ec368314386262865d582507
+  - enabled: 1
+    path: Assets/Scenes/Quiz.unity
+    guid: 6243506e040f9fc4abc9caf0ef0b26f3
+  - enabled: 1
+    path: Assets/Scenes/Evaluasi.unity
+    guid: 87b67520c1d7bda4eb5208a21b6128d8
+  - enabled: 1
+    path: Assets/Scenes/MenuPanduan.unity
+    guid: 29379a7f5c6a5884dbd5863528380c75
+  - enabled: 1
+    path: Assets/Scenes/MenuVideo.unity
+    guid: 4cf1db2cc6f041449b3de3961676781e
+  - enabled: 1
+    path: Assets/Scenes/Tentang.unity
+    guid: 98b9b172136c14041a91719ea3ccba16
+  m_configObjects: {}
