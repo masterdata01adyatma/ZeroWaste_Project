@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
 
 public class MateriDetailManager : MonoBehaviour
@@ -10,14 +11,21 @@ public class MateriDetailManager : MonoBehaviour
     public Image imageCover;
     public TMP_Text titleMateri;
 
-    [Header("Section")]
+    [Header("Section Materi")]
     public SectionUI[] sections;
 
-    [Header("Cover Materi")]
+    [Header("Cover Materi Utama")]
     public Sprite coverTeori;
     public Sprite coverBlouse;
     public Sprite coverDress;
     public Sprite coverRok;
+
+    [Header("Gambar Prinsip 5R")]
+    public Sprite coverReduce;
+    public Sprite coverReuse;
+    public Sprite coverRecycle;
+    public Sprite coverRecover;
+    public Sprite coverRegenerate;
 
     private void Start()
     {
@@ -26,14 +34,22 @@ public class MateriDetailManager : MonoBehaviour
         TampilkanMateri(materiTerpilih);
     }
 
+    // Menyembunyikan semua section sebelum menampilkan materi.
     private void SembunyikanSemuaSection()
     {
-        for (int i = 0; i < sections.Length; i++)
+        if (sections == null)
+            return;
+
+        foreach (SectionUI section in sections)
         {
-            sections[i].gameObject.SetActive(false);
+            if (section != null && section.gameObject != null)
+            {
+                section.gameObject.SetActive(false);
+            }
         }
     }
 
+    // Memilih materi berdasarkan nilai PlayerPrefs.
     private void TampilkanMateri(int materi)
     {
         switch (materi)
@@ -60,18 +76,21 @@ public class MateriDetailManager : MonoBehaviour
         }
     }
 
+    // =====================================================
+    // MATERI TEORI ZERO WASTE FASHION
+    // =====================================================
+
     private void TampilkanTeori()
     {
         SembunyikanSemuaSection();
 
-
-        imageCover.sprite = coverTeori;
+        UbahCover(coverTeori);
         titleMateri.text = "TEORI ZERO WASTE FASHION";
 
         AturSection(
             0,
             "Pengertian Zero Waste Fashion",
-            "Zero Waste Fashion merupakan pendekatan dalam desain dan produksi busana yang bertujuan untuk meminimalkan limbah tekstil sejak tahap pembuatan pola."
+            "Zero Waste Fashion merupakan pendekatan dalam desain dan produksi busana yang bertujuan meminimalkan limbah tekstil sejak tahap pembuatan pola."
         );
 
         AturSection(
@@ -82,47 +101,150 @@ public class MateriDetailManager : MonoBehaviour
 
         AturSection(
             2,
-            "Prinsip 4R Zero Waste Fashion",
-            "Prinsip 4R dalam Zero Waste Fashion terdiri dari Reduce, Reuse, Recycle, dan Recover."
+            "Prinsip 5R Zero Waste Fashion",
+            "Prinsip 5R dalam Zero Waste Fashion terdiri dari Reduce, Reuse, Recycle, Recover, dan Regenerate untuk mendukung pengurangan limbah serta pemanfaatan sumber daya secara berkelanjutan."
         );
 
         AturSection(
             3,
             "Reduce",
-            "Reduce merupakan upaya mengurangi penggunaan material dan menghasilkan limbah seminimal mungkin sejak tahap perancangan."
+            "Reduce merupakan upaya mengurangi penggunaan material dan menghasilkan limbah seminimal mungkin sejak tahap perancangan. Contohnya adalah menyusun pola pakaian secara efisien agar sisa kain berkurang."
         );
 
         AturSection(
             4,
             "Reuse",
-            "Reuse merupakan upaya menggunakan kembali material atau produk agar tetap memiliki manfaat dan tidak langsung menjadi limbah."
+            "Reuse merupakan upaya menggunakan kembali material atau produk agar tetap memiliki manfaat dan tidak langsung menjadi limbah. Contohnya adalah menggunakan kembali pakaian lama atau memanfaatkan kain bekas untuk produk lain."
         );
 
         AturSection(
             5,
             "Recycle",
-            "Recycle merupakan proses mengolah kembali material atau limbah menjadi bahan atau produk yang dapat digunakan kembali."
+            "Recycle merupakan proses mengolah kembali material atau limbah menjadi bahan atau produk yang dapat digunakan kembali. Contohnya adalah mengolah potongan kain menjadi serat tekstil atau bahan baru."
         );
 
         AturSection(
             6,
             "Recover",
-            "Recover merupakan upaya memulihkan atau memanfaatkan kembali nilai dari material yang sudah tidak dapat digunakan dalam bentuk sebelumnya."
+            "Recover merupakan upaya mengambil kembali nilai atau manfaat dari material yang sudah tidak dapat digunakan dalam bentuk sebelumnya. Contohnya adalah memanfaatkan limbah tekstil untuk produk alternatif atau pemulihan energi melalui proses yang sesuai."
         );
 
         AturSection(
             7,
-            "Kesimpulan",
-            "Zero Waste Fashion merupakan pendekatan desain yang berupaya meminimalkan limbah tekstil melalui perencanaan pola dan penggunaan material secara lebih efisien."
+            "Regenerate",
+            "Regenerate merupakan upaya mendukung pemulihan dan pembaruan sumber daya alam serta ekosistem. Dalam Zero Waste Fashion, penerapannya dapat berupa penggunaan bahan dari sumber yang dikelola secara regeneratif dan praktik produksi yang mendukung pemulihan lingkungan."
         );
+
+        AturSection(
+            8,
+            "Kesimpulan",
+            "Zero Waste Fashion merupakan pendekatan desain yang berupaya meminimalkan limbah tekstil melalui perencanaan pola dan penggunaan material secara efisien. Prinsip 5R membantu mengurangi limbah, menggunakan kembali material, mendaur ulang, memulihkan nilai sumber daya, dan mendukung regenerasi lingkungan."
+        );
+
+        PasangInteraksiGambar5R();
     }
+
+    // =====================================================
+    // INTERAKSI GAMBAR 5R
+    // =====================================================
+
+    private void PasangInteraksiGambar5R()
+    {
+        if (sections == null || sections.Length < 9)
+        {
+            Debug.LogWarning(
+                "MateriDetailManager: Array Sections harus memiliki " +
+                "minimal 9 elemen, dari indeks 0 sampai 8."
+            );
+
+            return;
+        }
+
+        // Indeks 3 = Reduce
+        sections[3]?.SetOnClick(() =>
+        {
+            UbahGambar5R(coverReduce, "Reduce");
+        });
+
+        // Indeks 4 = Reuse
+        sections[4]?.SetOnClick(() =>
+        {
+            UbahGambar5R(coverReuse, "Reuse");
+        });
+
+        // Indeks 5 = Recycle
+        sections[5]?.SetOnClick(() =>
+        {
+            UbahGambar5R(coverRecycle, "Recycle");
+        });
+
+        // Indeks 6 = Recover
+        sections[6]?.SetOnClick(() =>
+        {
+            UbahGambar5R(coverRecover, "Recover");
+        });
+
+        // Indeks 7 = Regenerate
+        sections[7]?.SetOnClick(() =>
+        {
+            UbahGambar5R(coverRegenerate, "Regenerate");
+        });
+    }
+
+    // Mengganti gambar di sebelah kiri sesuai materi yang diklik.
+    private void UbahGambar5R(Sprite gambar, string namaMateri)
+    {
+        if (imageCover == null)
+        {
+            Debug.LogWarning(
+                "Image Cover belum dihubungkan di Inspector."
+            );
+
+            return;
+        }
+
+        if (gambar == null)
+        {
+            Debug.LogWarning(
+                "Gambar untuk materi " + namaMateri +
+                " belum diisi di Inspector."
+            );
+
+            return;
+        }
+
+        imageCover.sprite = gambar;
+        imageCover.preserveAspect = true;
+    }
+
+    // Mengatur gambar cover materi.
+    private void UbahCover(Sprite gambar)
+    {
+        if (imageCover == null)
+        {
+            Debug.LogWarning(
+                "Image Cover belum dihubungkan di Inspector."
+            );
+
+            return;
+        }
+
+        if (gambar != null)
+        {
+            imageCover.sprite = gambar;
+            imageCover.preserveAspect = true;
+        }
+    }
+
+    // =====================================================
+    // MATERI BLOUSE
+    // =====================================================
 
     private void TampilkanBlouse()
     {
         SembunyikanSemuaSection();
 
-
-        imageCover.sprite = coverBlouse;
+        UbahCover(coverBlouse);
         titleMateri.text = "BLOUSE ZERO WASTE";
 
         AturSection(
@@ -156,12 +278,15 @@ public class MateriDetailManager : MonoBehaviour
         );
     }
 
+    // =====================================================
+    // MATERI DRESS
+    // =====================================================
+
     private void TampilkanDress()
     {
         SembunyikanSemuaSection();
 
-
-        imageCover.sprite = coverDress;
+        UbahCover(coverDress);
         titleMateri.text = "DRESS ZERO WASTE";
 
         AturSection(
@@ -195,12 +320,15 @@ public class MateriDetailManager : MonoBehaviour
         );
     }
 
+    // =====================================================
+    // MATERI ROK
+    // =====================================================
+
     private void TampilkanRok()
     {
         SembunyikanSemuaSection();
 
-
-        imageCover.sprite = coverRok;
+        UbahCover(coverRok);
         titleMateri.text = "ROK ZERO WASTE";
 
         AturSection(
@@ -234,27 +362,84 @@ public class MateriDetailManager : MonoBehaviour
         );
     }
 
-    private void AturSection(int index, string header, string content)
+    // =====================================================
+    // PENGATUR SECTION
+    // =====================================================
+
+    private void AturSection(
+        int index,
+        string header,
+        string content)
     {
-        if (index >= sections.Length)
+        if (sections == null ||
+            index < 0 ||
+            index >= sections.Length ||
+            sections[index] == null)
+        {
+            return;
+        }
+
+        SectionUI section = sections[index];
+
+        if (section.gameObject == null)
             return;
 
-        sections[index].gameObject.SetActive(true);
-
-        sections[index].SetData(header, content);
+        section.gameObject.SetActive(true);
+        section.SetData(header, content);
     }
 }
+
+// =========================================================
+// KOMPONEN SECTION UI
+// =========================================================
 
 [System.Serializable]
 public class SectionUI
 {
     public GameObject gameObject;
+
     public TMP_Text headerText;
     public TMP_Text contentText;
 
+    [Header("Tombol Dropdown")]
+    public Button headerButton;
+
+    private UnityAction clickAction;
+
     public void SetData(string header, string content)
     {
-        headerText.text = header;
-        contentText.text = content;
+        if (headerText != null)
+            headerText.text = header;
+
+        if (contentText != null)
+            contentText.text = content;
+    }
+
+    public void SetOnClick(UnityAction action)
+    {
+        if (headerButton == null)
+        {
+            Debug.LogWarning(
+                "Header Button belum dihubungkan pada section: " +
+                (gameObject != null
+                    ? gameObject.name
+                    : "Tidak diketahui")
+            );
+
+            return;
+        }
+
+        // Menghapus listener sebelumnya yang dibuat oleh script ini.
+        if (clickAction != null)
+        {
+            headerButton.onClick.RemoveListener(clickAction);
+        }
+
+        clickAction = action;
+
+        if (clickAction != null)
+        {
+            headerButton.onClick.AddListener(clickAction);
+        }
     }
 }

@@ -1,95 +1,107 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(RectTransform), typeof(Image))]
 public class PatternDrag : MonoBehaviour,
-    
-    IBeginDragHandler,
-    IDragHandler,
-    IEndDragHandler
+
+   IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("Area Kain")]
-    public RectTransform panelKain;
-
-    private RectTransform patternRect;
+    private RectTransform rectTransform;
+    private RectTransform parentRect;
     private Canvas canvas;
+    private Image image;
 
-    private Vector2 startPosition;
+    private bool locked;
+    private Vector2 dragOffset;
 
     private void Awake()
     {
-        patternRect = GetComponent<RectTransform>();
+        rectTransform = GetComponent<RectTransform>();
+        parentRect = transform.parent as RectTransform;
         canvas = GetComponentInParent<Canvas>();
+        image = GetComponent<Image>();
 
-        startPosition = patternRect.anchoredPosition;
+        if (image != null)
+            image.raycastTarget = true;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // Menyimpan posisi sebelum mulai digeser
-        startPosition = patternRect.anchoredPosition;
+        if (locked || parentRect == null || canvas == null)
+            return;
+
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentRect,
+            eventData.position,
+            eventData.pressEventCamera,
+            out Vector2 localPoint))
+        {
+            dragOffset = rectTransform.anchoredPosition - localPoint;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (panelKain == null || canvas == null)
+        if (locked || parentRect == null || canvas == null)
             return;
 
-        // Pergerakan mouse/touch dikonversi sesuai skala Canvas
-        Vector2 delta = eventData.delta / canvas.scaleFactor;
-
-        Vector2 newPosition =
-            patternRect.anchoredPosition + delta;
-
-        // Batasi agar pola tetap berada di dalam PanelKain
-        newPosition = ClampToPanel(newPosition);
-
-        patternRect.anchoredPosition = newPosition;
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentRect,
+            eventData.position,
+            eventData.pressEventCamera,
+            out Vector2 localPoint))
+        {
+            rectTransform.anchoredPosition = localPoint + dragOffset;
+            BatasiDalamKain();
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // Posisi terakhir tetap dipertahankan
+        if (!locked)
+            BatasiDalamKain();
     }
 
-    private Vector2 ClampToPanel(Vector2 position)
+    private void BatasiDalamKain()
     {
-        float panelHalfWidth = panelKain.rect.width / 2f;
-        float panelHalfHeight = panelKain.rect.height / 2f;
+        if (parentRect == null)
+            return;
 
-        float patternHalfWidth = patternRect.rect.width / 2f;
-        float patternHalfHeight = patternRect.rect.height / 2f;
+        Vector2 parentSize = parentRect.rect.size;
+        Vector2 itemSize = rectTransform.rect.size;
 
-        float minX =
-            -panelHalfWidth + patternHalfWidth;
+        float minX = -parentSize.x / 2f + itemSize.x / 2f;
+        float maxX = parentSize.x / 2f - itemSize.x / 2f;
+        float minY = -parentSize.y / 2f + itemSize.y / 2f;
+        float maxY = parentSize.y / 2f - itemSize.y / 2f;
 
-        float maxX =
-            panelHalfWidth - patternHalfWidth;
+        Vector2 pos = rectTransform.anchoredPosition;
 
-        float minY =
-            -panelHalfHeight + patternHalfHeight;
+        pos.x = minX > maxX ? 0 : Mathf.Clamp(pos.x, minX, maxX);
+        pos.y = minY > maxY ? 0 : Mathf.Clamp(pos.y, minY, maxY);
 
-        float maxY =
-            panelHalfHeight - patternHalfHeight;
+        rectTransform.anchoredPosition = pos;
+    }
 
-        position.x = Mathf.Clamp(
-            position.x,
-            minX,
-            maxX
-        );
+    public void SetLocked(bool value)
+    {
+        locked = value;
 
-        position.y = Mathf.Clamp(
-            position.y,
-            minY,
-            maxY
-        );
+        if (image != null)
+        {
+            image.color = value
+                ? new Color(0.8f, 0.8f, 0.8f, 1f)
+                : Color.white;
 
-        return position;
+            image.raycastTarget = !value;
+        }
     }
 
     public void ResetPosition()
     {
-        patternRect.anchoredPosition = startPosition;
+        SetLocked(false);
     }
 }

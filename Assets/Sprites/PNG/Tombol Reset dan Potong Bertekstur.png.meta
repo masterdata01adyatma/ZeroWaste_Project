@@ -1,0 +1,380 @@
+fileFormatVersion: 2
+guid: 845336825f69a4140a2ebac382c8880d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tombol Reset dan Potong Bertekstur_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 218
+        width: 964
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce1c335650ed074f8d4372baf91cef2
+      internalID: 403426158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombol Reset dan Potong Bertekstur_1
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 207
+        width: 1082
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721278ca53d194940b37452d4f6cecbf
+      internalID: -1830385286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3a79dea6eb730484e8ddf26a988bf51b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tombol Reset dan Potong Bertekstur_0: 403426158
+      Tombol Reset dan Potong Bertekstur_1: -1830385286
+      Tombol Reset dan Potong Bertekstur_10: -1776395289
+      Tombol Reset dan Potong Bertekstur_100: 524935
+      Tombol Reset dan Potong Bertekstur_101: -1384798093
+      Tombol Reset dan Potong Bertekstur_102: -141295273
+      Tombol Reset dan Potong Bertekstur_103: -1799137477
+      Tombol Reset dan Potong Bertekstur_104: -810599975
+      Tombol Reset dan Potong Bertekstur_105: 1718514739
+      Tombol Reset dan Potong Bertekstur_106: -899334803
+      Tombol Reset dan Potong Bertekstur_107: -1047726567
+      Tombol Reset dan Potong Bertekstur_108: 715348808
+      Tombol Reset dan Potong Bertekstur_109: -1041832466
+      Tombol Reset dan Potong Bertekstur_11: 639298588
+      Tombol Reset dan Potong Bertekstur_110: -1904929437
+      Tombol Reset dan Potong Bertekstur_111: 1547520330
+      Tombol Reset dan Potong Bertekstur_112: -746105296
+      Tombol Reset dan Potong Bertekstur_113: -1278793772
+      Tombol Reset dan Potong Bertekstur_114: -1251676765
+      Tombol Reset dan Potong Bertekstur_115: 1453119609
+      Tombol Reset dan Potong Bertekstur_116: -2034816846
+      Tombol Reset dan Potong Bertekstur_117: -225150806
+      Tombol Reset dan Potong Bertekstur_118: -1082639611
+      Tombol Reset dan Potong Bertekstur_119: 1823360895
+      Tombol Reset dan Potong Bertekstur_12: 1234657503
+      Tombol Reset dan Potong Bertekstur_120: 1722176384
+      Tombol Reset dan Potong Bertekstur_121: -93965262
+      Tombol Reset dan Potong Bertekstur_122: 1876585025
+      Tombol Reset dan Potong Bertekstur_123: -1154332982
+      Tombol Reset dan Potong Bertekstur_124: 515166683
+      Tombol Reset dan Potong Bertekstur_125: -401789462
+      Tombol Reset dan Potong Bertekstur_126: 1244775010
+      Tombol Reset dan Potong Bertekstur_127: 1069414667
+      Tombol Reset dan Potong Bertekstur_128: -2120398543
+      Tombol Reset dan Potong Bertekstur_129: 616390385
+      Tombol Reset dan Potong Bertekstur_13: -247250353
+      Tombol Reset dan Potong Bertekstur_130: -1360199307
+      Tombol Reset dan Potong Bertekstur_131: 2126485674
+      Tombol Reset dan Potong Bertekstur_132: -1768229990
+      Tombol Reset dan Potong Bertekstur_133: -1258293815
+      Tombol Reset dan Potong Bertekstur_134: 41733257
+      Tombol Reset dan Potong Bertekstur_135: 2136330562
+      Tombol Reset dan Potong Bertekstur_136: 461766561
+      Tombol Reset dan Potong Bertekstur_137: 366970978
+      Tombol Reset dan Potong Bertekstur_138: -651059480
+      Tombol Reset dan Potong Bertekstur_139: 2059433661
+      Tombol Reset dan Potong Bertekstur_14: 1797028836
+      Tombol Reset dan Potong Bertekstur_140: 52360952
+      Tombol Reset dan Potong Bertekstur_141: -210664513
+      Tombol Reset dan Potong Bertekstur_142: 1125413909
+      Tombol Reset dan Potong Bertekstur_143: -1878525559
+      Tombol Reset dan Potong Bertekstur_144: 1009379661
+      Tombol Reset dan Potong Bertekstur_145: -2028181493
+      Tombol Reset dan Potong Bertekstur_146: -816089562
+      Tombol Reset dan Potong Bertekstur_147: 405777687
+      Tombol Reset dan Potong Bertekstur_148: -451716349
+      Tombol Reset dan Potong Bertekstur_149: 369836509
+      Tombol Reset dan Potong Bertekstur_15: 1576401700
+      Tombol Reset dan Potong Bertekstur_150: -1245554825
+      Tombol Reset dan Potong Bertekstur_151: -1290986515
+      Tombol Reset dan Potong Bertekstur_152: -1981037783
+      Tombol Reset dan Potong Bertekstur_153: -1829646113
+      Tombol Reset dan Potong Bertekstur_154: -1501713674
+      Tombol Reset dan Potong Bertekstur_155: -547380489
+      Tombol Reset dan Potong Bertekstur_156: -1791188863
+      Tombol Reset dan Potong Bertekstur_157: -702674612
+      Tombol Reset dan Potong Bertekstur_158: -948464648
+      Tombol Reset dan Potong Bertekstur_159: -1534555925
+      Tombol Reset dan Potong Bertekstur_16: 1804606252
+      Tombol Reset dan Potong Bertekstur_160: -162988800
+      Tombol Reset dan Potong Bertekstur_161: -1079884634
+      Tombol Reset dan Potong Bertekstur_162: -1541891295
+      Tombol Reset dan Potong Bertekstur_163: -1833698315
+      Tombol Reset dan Potong Bertekstur_164: 1159007297
+      Tombol Reset dan Potong Bertekstur_165: -257847260
+      Tombol Reset dan Potong Bertekstur_166: 667756993
+      Tombol Reset dan Potong Bertekstur_167: -840007797
+      Tombol Reset dan Potong Bertekstur_168: -1706539963
+      Tombol Reset dan Potong Bertekstur_169: 358667910
+      Tombol Reset dan Potong Bertekstur_17: 205515455
+      Tombol Reset dan Potong Bertekstur_170: -1608069545
+      Tombol Reset dan Potong Bertekstur_171: -1316789202
+      Tombol Reset dan Potong Bertekstur_172: 1444229021
+      Tombol Reset dan Potong Bertekstur_173: 1060309365
+      Tombol Reset dan Potong Bertekstur_174: 1820057692
+      Tombol Reset dan Potong Bertekstur_175: -1636933955
+      Tombol Reset dan Potong Bertekstur_176: 276255924
+      Tombol Reset dan Potong Bertekstur_177: 1051961559
+      Tombol Reset dan Potong Bertekstur_178: 1032904792
+      Tombol Reset dan Potong Bertekstur_179: -720487734
+      Tombol Reset dan Potong Bertekstur_18: 1963973839
+      Tombol Reset dan Potong Bertekstur_180: 1656544866
+      Tombol Reset dan Potong Bertekstur_181: -2139870697
+      Tombol Reset dan Potong Bertekstur_182: 1797477595
+      Tombol Reset dan Potong Bertekstur_183: -851471690
+      Tombol Reset dan Potong Bertekstur_184: 699137839
+      Tombol Reset dan Potong Bertekstur_185: 697598232
+      Tombol Reset dan Potong Bertekstur_186: 710316562
+      Tombol Reset dan Potong Bertekstur_187: -742103343
+      Tombol Reset dan Potong Bertekstur_188: -872706741
+      Tombol Reset dan Potong Bertekstur_189: 471177839
+      Tombol Reset dan Potong Bertekstur_19: 1212393230
+      Tombol Reset dan Potong Bertekstur_190: -788218514
+      Tombol Reset dan Potong Bertekstur_191: 623422629
+      Tombol Reset dan Potong Bertekstur_192: -710864241
+      Tombol Reset dan Potong Bertekstur_193: 1893819193
+      Tombol Reset dan Potong Bertekstur_194: -1065364780
+      Tombol Reset dan Potong Bertekstur_195: -65663364
+      Tombol Reset dan Potong Bertekstur_196: -1175479669
+      Tombol Reset dan Potong Bertekstur_197: -149687745
+      Tombol Reset dan Potong Bertekstur_198: 1448619835
+      Tombol Reset dan Potong Bertekstur_199: -514807149
+      Tombol Reset dan Potong Bertekstur_2: -858084524
+      Tombol Reset dan Potong Bertekstur_20: 984648541
+      Tombol Reset dan Potong Bertekstur_200: -347160035
+      Tombol Reset dan Potong Bertekstur_201: 782742460
+      Tombol Reset dan Potong Bertekstur_202: -238966554
+      Tombol Reset dan Potong Bertekstur_203: -1497250603
+      Tombol Reset dan Potong Bertekstur_204: 1990045065
+      Tombol Reset dan Potong Bertekstur_205: 1736157457
+      Tombol Reset dan Potong Bertekstur_206: 682031882
+      Tombol Reset dan Potong Bertekstur_207: -1353496207
+      Tombol Reset dan Potong Bertekstur_208: -361765708
+      Tombol Reset dan Potong Bertekstur_209: -1917012475
+      Tombol Reset dan Potong Bertekstur_21: 592327137
+      Tombol Reset dan Potong Bertekstur_210: 1186537016
+      Tombol Reset dan Potong Bertekstur_22: 2030176971
+      Tombol Reset dan Potong Bertekstur_23: -352894439
+      Tombol Reset dan Potong Bertekstur_24: -1907807898
+      Tombol Reset dan Potong Bertekstur_25: 27262437
+      Tombol Reset dan Potong Bertekstur_26: 11791547
+      Tombol Reset dan Potong Bertekstur_27: -527119464
+      Tombol Reset dan Potong Bertekstur_28: -1049716942
+      Tombol Reset dan Potong Bertekstur_29: 1780464604
+      Tombol Reset dan Potong Bertekstur_3: -2104674784
+      Tombol Reset dan Potong Bertekstur_30: 1332731289
+      Tombol Reset dan Potong Bertekstur_31: 1149345292
+      Tombol Reset dan Potong Bertekstur_32: -1977704042
+      Tombol Reset dan Potong Bertekstur_33: 920291666
+      Tombol Reset dan Potong Bertekstur_34: 1329956649
+      Tombol Reset dan Potong Bertekstur_35: -1980318551
+      Tombol Reset dan Potong Bertekstur_36: 1611987429
+      Tombol Reset dan Potong Bertekstur_37: 1966126252
+      Tombol Reset dan Potong Bertekstur_38: -1026330756
+      Tombol Reset dan Potong Bertekstur_39: -1599042401
+      Tombol Reset dan Potong Bertekstur_4: 1965382072
+      Tombol Reset dan Potong Bertekstur_40: -1560957615
+      Tombol Reset dan Potong Bertekstur_41: -902470270
+      Tombol Reset dan Potong Bertekstur_42: 555826961
+      Tombol Reset dan Potong Bertekstur_43: -649632788
+      Tombol Reset dan Potong Bertekstur_44: -1709182420
+      Tombol Reset dan Potong Bertekstur_45: -251361098
+      Tombol Reset dan Potong Bertekstur_46: 56109374
+      Tombol Reset dan Potong Bertekstur_47: -2053685757
+      Tombol Reset dan Potong Bertekstur_48: 1004490909
+      Tombol Reset dan Potong Bertekstur_49: -1930882772
+      Tombol Reset dan Potong Bertekstur_5: -1543626722
+      Tombol Reset dan Potong Bertekstur_50: 1049345789
+      Tombol Reset dan Potong Bertekstur_51: -1111477407
+      Tombol Reset dan Potong Bertekstur_52: -2012512754
+      Tombol Reset dan Potong Bertekstur_53: 250864948
+      Tombol Reset dan Potong Bertekstur_54: 1580938765
+      Tombol Reset dan Potong Bertekstur_55: -1895273134
+      Tombol Reset dan Potong Bertekstur_56: 1756636985
+      Tombol Reset dan Potong Bertekstur_57: 1822777172
+      Tombol Reset dan Potong Bertekstur_58: -1286886410
+      Tombol Reset dan Potong Bertekstur_59: 1112222800
+      Tombol Reset dan Potong Bertekstur_6: 1538435224
+      Tombol Reset dan Potong Bertekstur_60: -1175288377
+      Tombol Reset dan Potong Bertekstur_61: -1481065231
+      Tombol Reset dan Potong Bertekstur_62: -1056678721
+      Tombol Reset dan Potong Bertekstur_63: -133781833
+      Tombol Reset dan Potong Bertekstur_64: -1991941538
+      Tombol Reset dan Potong Bertekstur_65: -1927197525
+      Tombol Reset dan Potong Bertekstur_66: -1141016709
+      Tombol Reset dan Potong Bertekstur_67: 7990003
+      Tombol Reset dan Potong Bertekstur_68: -285976383
+      Tombol Reset dan Potong Bertekstur_69: -1690541455
+      Tombol Reset dan Potong Bertekstur_7: -1900677023
+      Tombol Reset dan Potong Bertekstur_70: 1971821568
+      Tombol Reset dan Potong Bertekstur_71: -1166522070
+      Tombol Reset dan Potong Bertekstur_72: 1779946635
+      Tombol Reset dan Potong Bertekstur_73: 558770604
+      Tombol Reset dan Potong Bertekstur_74: -1953261833
+      Tombol Reset dan Potong Bertekstur_75: -1557035199
+      Tombol Reset dan Potong Bertekstur_76: 253281679
+      Tombol Reset dan Potong Bertekstur_77: 801631955
+      Tombol Reset dan Potong Bertekstur_78: -1466273390
+      Tombol Reset dan Potong Bertekstur_79: -1816800987
+      Tombol Reset dan Potong Bertekstur_8: -506711811
+      Tombol Reset dan Potong Bertekstur_80: 1165519327
+      Tombol Reset dan Potong Bertekstur_81: 866574819
+      Tombol Reset dan Potong Bertekstur_82: 568836345
+      Tombol Reset dan Potong Bertekstur_83: -1843120600
+      Tombol Reset dan Potong Bertekstur_84: -1474701025
+      Tombol Reset dan Potong Bertekstur_85: -1085389165
+      Tombol Reset dan Potong Bertekstur_86: -1065431574
+      Tombol Reset dan Potong Bertekstur_87: -901157640
+      Tombol Reset dan Potong Bertekstur_88: 1535686703
+      Tombol Reset dan Potong Bertekstur_89: -1608636611
+      Tombol Reset dan Potong Bertekstur_9: -2012770773
+      Tombol Reset dan Potong Bertekstur_90: 1022523610
+      Tombol Reset dan Potong Bertekstur_91: -1816620666
+      Tombol Reset dan Potong Bertekstur_92: -1191779273
+      Tombol Reset dan Potong Bertekstur_93: -880642438
+      Tombol Reset dan Potong Bertekstur_94: -623410704
+      Tombol Reset dan Potong Bertekstur_95: -2053917970
+      Tombol Reset dan Potong Bertekstur_96: 1568702691
+      Tombol Reset dan Potong Bertekstur_97: 449359119
+      Tombol Reset dan Potong Bertekstur_98: -207952912
+      Tombol Reset dan Potong Bertekstur_99: 1671456710
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
